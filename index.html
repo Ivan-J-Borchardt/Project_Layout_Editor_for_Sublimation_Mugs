@@ -5,80 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Git Mug</title>
-    <style>
-        h1 {
-            width: 100%;
-            text-align: center;
-            text-transform: uppercase;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        }
-
-        .sec_main {
-            display: flex;
-        }
-
-        .line {
-            display: flex;
-         
-        }
-
-        .block {
-            height: 100%;
-            padding-top: 17px;
-        }
-
-        .side {
-            width: 25%;
-        }
-
-        .middle {
-            width: 50%;
-
-        }
-
-        .one_line_input {
-            display: flex;
-            width: 100%;
-  
-
-        }
-
-        .two_line_input {
-            display: grid;
-
-            padding: 10px;
-
-        }
-
-        .mug1 {
-            padding-left: 35px;
-            padding-top: 30px;
-            
-        }
-
-        .canvas_container{
-            background-image: url("alphaBack.jpg");
-            background-repeat: no-repeat;
-            background-size: 100%;
-        }
-
-        .margin{
-            border: 1px solid #d3d3d3;
-        }
-
-        #myCanvas {
-            border: 1px solid #d3d3d3;
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 </head>
 
 <body>
+    <img src="mug1.png" class="mug-img" id="blackmug">
+    <img src="mug2.png" class="mug-img" id="whitemug">
     <h1>Customize Your Own Git Mug</h1>
     <section class="sec_main">
-        <div class="side mug1">
-            <img src="./mockW2.jpg" alt="" srcset="" width="70%">
-        </div>
         <div class="middle">
             <div class="line">
                 <div class="two_line_input">
@@ -89,13 +24,13 @@
                     <label for="">Font Size</label>
                     <input type="number" name="" id="inFontSize" maxlength="3" step="1" min="10" max="999" value="120">
                 </div>
-                <div class="two_line_input">
+                <div class="two_line_input" id="input-select">
                     <label for="">Font</label>
                     <select id="seFont">
                         <option value="Arial">Arial</option>
                     </select>
                 </div>
-                <div class="two_line_input">
+                <div class="two_line_input" id="input-select">
                     <label for="">Text</label>
                     <select id="seText">
                         <option value="fill">Fill</option>
@@ -122,15 +57,15 @@
                 <div class="block">
                     <div class="one_line_input">
                         <input type="radio" name="nmType" id="inBlack" checked>
-                        <label for="">Dark</label>
+                        <label for="inBlack">Dark</label>
                     </div>
                     <div class="one_line_input">
                         <input type="radio" name="nmType" id="inWhite">
-                        <label for="">Light</label>
+                        <label for="inWhite">Light</label>
                     </div>
                     <div class="one_line_input">
                         <input type="radio" name="nmType" id="inAlpha">
-                        <label for="">Alpha</label>
+                        <label for="inAlpha">Alpha</label>
                     </div>
                 </div>
 
@@ -144,13 +79,13 @@
                 </canvas>
             </div>
 
-            <button onclick="insertName()">Insert Name</button>
-            <button onclick="generateCanvas()">Clear/Load</button>
-            <button onclick="download()">Download</button>
+            <div class="btn-container">
+                <button onclick="insertName()">Insert Name</button>
+                <button onclick="generateCanvas()">Clear/Load</button>
+                <button onclick="download()">Download</button>
+            </div>
         </div>
-        <div class="side">
-            <img src="./mockBlack.jpg" alt="" srcset="" width="100%">
-        </div>
+
     </section>
 
     <script>
