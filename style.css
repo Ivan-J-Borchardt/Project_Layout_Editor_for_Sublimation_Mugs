@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+
+
+body{
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* INÍCIO MANIPULAÇÃO E ESTILOS DOS INPUTS */
+
+.sec_main {
+    display: flex;
+    justify-content: center;
+}
+
+.line {
+    display: flex;
+    justify-content: center;
+}
+
+.margin{
+    border: 1px solid #d3d3d3;
+}
+
+.middle {
+    width: 50vw;
+}
+
+.block {
+    height: 100%;
+    padding: 15px;
+}
+
+.one_line_input {
+    display: flex;
+    width: 100%;
+}
+
+.two_line_input {
+    display: grid;
+    align-items: center;
+    padding: 10px;
+}
+
+.two_line_input input, select{
+    height: 25px;
+}
+
+#input-select select{
+    width: 80px;
+}
+
+#inFontSize{
+    width: 65px;
+}
+
+#inTextColor{
+    border: none;
+    height: 28px;
+}
+
+/* FIM MANIPULAÇÃO E ESTILOS DOS INPUTS */
+
+
+/* CANVAS */
+
+.canvas_container{
+    background-image: url("alphaBack.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 25px;
+}
+
+#myCanvas {
+    border: 1px solid #d3d3d3;
+    width: 100%
+}
+
+/*  BOTÕES  */
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+button {
+    color: #090909;
+    padding: 0.7em 1.7em;
+    font-size: 16px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+    box-shadow: 6px 6px 12px #c5c5c5,
+                -6px -6px 12px #ffffff;
+    cursor: pointer;
+   }
+   
+   button:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5,
+                inset -4px -4px 12px #ffffff;
+   }
+
+   button:hover{
+    background-color: #c5c5c5;
+    border: none;
+   }
+
+   /* IMAGENS */
+
+.mug-img{
+    position: absolute;
+}
+
+#blackmug{
+    width: 300px;
+    top: 50%;
+    transform: rotate(-10deg);
+}
+
+#whitemug{
+    width: 400px;
+    left: 75%;
+    top: 25%;
+    transform: rotate(-10deg);
+}
+
+/* INÍCIO MEDIA QUERY */
+
+@media screen and (max-width:1090px) {
+
+    body{
+        height: 96vh;
+    }
+
+    .line {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+
+    .block{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+
+    .two_line_input {
+        padding-bottom: 5px;
+        width: 90vw;
+    }
+
+
+
+    #input-select select{
+        width: 100%;
+    }
+
+    .middle{
+        width: 100vw;
+    }
+    
+    .canvas_container{
+        margin: 10px 0;
+    }
+
+    .mug-img{
+        display: none;
+    }
+
+    button{
+        padding: 0.3em 1.3em;
+    }
+}
+
+/* FIM MEDIA QUERY */
